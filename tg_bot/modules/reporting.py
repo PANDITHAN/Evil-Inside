@@ -156,5 +156,5 @@ dispatcher.add_handler(SETTING_HANDLER)
 dispatcher.add_handler(REPORT_HANDLER, REPORT_GROUP)
 dispatcher.add_handler(ADMIN_REPORT_HANDLER, REPORT_GROUP)
 
-__mod_name__ = "REPORTING"
+__mod_name__ = "𝚁𝙴𝙿𝙾𝚁𝚃𝙸𝙽𝙶"
 __handlers__ = [(REPORT_HANDLER, REPORT_GROUP), (ADMIN_REPORT_HANDLER, REPORT_GROUP), (SETTING_HANDLER)]
