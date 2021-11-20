@@ -111,6 +111,6 @@ PURGE_HANDLER = DisableAbleCommandHandler("purge", purge, filters=Filters.group,
 dispatcher.add_handler(DELETE_HANDLER)
 dispatcher.add_handler(PURGE_HANDLER)
 
-__mod_name__ = "PURGE & DEL"
+__mod_name__ = "𝙿𝚄𝚁𝙶𝙴 & 𝙳𝙴𝙻"
 __command_list__ = ["del", "purge"]
 __handlers__ = [DELETE_HANDLER, PURGE_HANDLER]
