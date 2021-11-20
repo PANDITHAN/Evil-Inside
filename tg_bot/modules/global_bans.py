@@ -306,7 +306,7 @@ you and your groups by removing spam flooders as quickly as possible. They can b
 /gbanstat
 """
 
-__mod_name__ = "GLOBAL BAN"
+__mod_name__ = "𝙶𝙻𝙾𝙱𝙰𝙻 𝙱𝙰𝙽"
 
 GBAN_HANDLER = CommandHandler("gban", gban, pass_args=True,
                               filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
