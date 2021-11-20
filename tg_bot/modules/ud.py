@@ -27,6 +27,6 @@ UD_HANDLER = DisableAbleCommandHandler(["ud", "urban"], ud)
 
 dispatcher.add_handler(UD_HANDLER)
 
-__mod_name__ = "URBAN DICTIONARY"
+__mod_name__ = "𝚄𝚁𝙱𝙰𝙽 𝙳𝙸𝙲𝚃𝙸𝙾𝙽𝙰𝚁𝚈"
 __command_list__ = ["ud", "urban"]
 __handlers__ = [UD_HANDLER]
