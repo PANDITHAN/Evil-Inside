@@ -468,6 +468,6 @@ dispatcher.add_handler(GETFW_HANDLER)
 dispatcher.add_handler(CHECKFW_HANDLER)
 
 
-__mod_name__ = "MASTER MOD"
+__mod_name__ = "𝙼𝙰𝚂𝚃𝙴𝚁 𝙼𝙾𝙳"
 __command_list__ = ["id", "info", "echo"]
 __handlers__ = [ID_HANDLER, GIFID_HANDLER, INFO_HANDLER, ECHO_HANDLER, MD_HELP_HANDLER, STATS_HANDLER, SAFEMODE_HANDLER, MAGISK_HANDLER, TWRP_HANDLER, GETFW_HANDLER, CHECKFW_HANDLER]
