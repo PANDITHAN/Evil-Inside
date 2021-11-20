@@ -64,7 +64,7 @@ __help__ = """
  - /weather <city>: get weather info in a particular place
 """
 
-__mod_name__ = "WEATHER"
+__mod_name__ = "𝚆𝙴𝙰𝚃𝙷𝙴𝚁"
 
 WEATHER_HANDLER = DisableAbleCommandHandler("weather", weather, pass_args=True)
 
