@@ -146,5 +146,5 @@ dispatcher.add_handler(BL_HANDLER)
 dispatcher.add_handler(UNBL_HANDLER)
 dispatcher.add_handler(BLUSERS_HANDLER)
 
-__mod_name__ = "𝙱𝙻𝙰𝙲𝙺𝙻𝙸𝚂𝚃𝙸𝙽𝙶 𝚄𝚂𝙴𝚁𝚂"
+__mod_name__ = "BLACKLISTING USERS"
 __handlers__ = [BL_HANDLER, UNBL_HANDLER, BLUSERS_HANDLER]

@@ -166,5 +166,5 @@ dispatcher.add_handler(FLOOD_BAN_HANDLER, FLOOD_GROUP)
 dispatcher.add_handler(SET_FLOOD_HANDLER)
 dispatcher.add_handler(FLOOD_HANDLER)
 
-__mod_name__ = "𝙰𝙽𝚃𝙸 𝙵𝙻𝙾𝙾𝙳"
+__mod_name__ = "ANTI FLOOD"
 __handlers__ = [(FLOOD_BAN_HANDLER, FLOOD_GROUP), SET_FLOOD_HANDLER, FLOOD_HANDLER]
