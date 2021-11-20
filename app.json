@@ -33,16 +33,16 @@
       },      
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
-         "value": "1100231654"
+         "value": ""
       },
       "OWNER_NAME": {
          "description": "Your username",
-         "value": "LEGENDX22"
+         "value": ""
       },
       "DEV_USERS": {
          "description": "ID of users who are Dev (can use /py etc.)",
          "required": false,
-         "value": "1100231654"
+         "value": ""
       },
 "GRAND_IMG": {
          "description": "Image shows when hit /start",
@@ -80,12 +80,12 @@
       "SUDO_USERS": {
          "description": "A space separated list of user IDs who you want to assign as sudo users.",
          "required": false,
-         "value": "1100231654"
+         "value": ""
       },
       "TIGER_USERS": {
          "description": "A space separated list of user IDs who you wanna assign as tiger users.",
          "required": false,
-         "value": "1100231654"
+         "value": ""
       },
       "TOKEN": {
          "description": "Your bot token.",
@@ -105,7 +105,7 @@
       "WHITELIST_USERS": {
          "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
          "required": false,
-         "value": "1100231654"
+         "value": ""
       }
    },
    "keywords": [
@@ -116,5 +116,5 @@
    ],
    "logo": "https://telegra.ph/file/e2a9d5c9eb9fd702f50d2.jpg",
    "name": "Evil-Inside",
-   "repository": "https://github.com/legendx22/GRANDROBOT"
+   "repository": "https://github.com/PANDITHAN/Evil-Inside.git"
 }
