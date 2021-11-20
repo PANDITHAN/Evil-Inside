@@ -315,7 +315,7 @@ you and your groups by removing spam flooders as quickly as possible. They can b
 /gmutestat
 """
 
-__mod_name__ = "GLOBAL MUTE"
+__mod_name__ = "𝙶𝙻𝙾𝙱𝙰𝙻 𝙼𝚄𝚃𝙴"
 
 GMUTE_HANDLER = CommandHandler("gmute", gmute, pass_args=True,
                               filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
