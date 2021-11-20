@@ -1,4 +1,4 @@
-# Module to blacklist users and prevent them from using commands by @TheRealPhoenix
+# Module to blacklist users and prevent them from using commands by @M_STER_TECH
 from typing import List
 
 from telegram import Bot, Update, ParseMode
@@ -146,5 +146,5 @@ dispatcher.add_handler(BL_HANDLER)
 dispatcher.add_handler(UNBL_HANDLER)
 dispatcher.add_handler(BLUSERS_HANDLER)
 
-__mod_name__ = "BLACKLISTING USERS"
+__mod_name__ = "𝙱𝙻𝙰𝙲𝙺𝙻𝙸𝚂𝚃𝙸𝙽𝙶 𝚄𝚂𝙴𝚁𝚂"
 __handlers__ = [BL_HANDLER, UNBL_HANDLER, BLUSERS_HANDLER]
