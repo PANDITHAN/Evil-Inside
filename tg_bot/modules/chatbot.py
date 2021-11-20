@@ -1,4 +1,4 @@
-
+# AI module using Intellivoid's Coffeehouse API by @TheRealPhoenix
 from time import time, sleep
 
 from coffeehouse.lydia import LydiaAI
@@ -87,7 +87,7 @@ def chatbot(bot: Bot, update: Update):
             bot.send_message(OWNER_ID, f"Chatbot error: {e} occurred in {chat_id}!")
                     
 
-__mod_name__ = "𝙲𝙷𝙰𝚃 𝙱𝙾𝚃"
+__mod_name__ = "CHAT BOT"
 
 __help__ = """
 

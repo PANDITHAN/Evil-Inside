@@ -401,7 +401,7 @@ be a sentence, encompass it with quotes, as such: `/addwarn "very angry" This is
  - /strongwarn <on/yes/off/no>: If set to on, exceeding the warn limit will result in a ban. Else, will just punch.
 """
 
-__mod_name__ = "𝚆𝙰𝚁𝙽𝙸𝙽𝙶𝚂"
+__mod_name__ = "WARNINGS"
 
 WARN_HANDLER = CommandHandler("warn", warn_user, pass_args=True, filters=Filters.group)
 RESET_WARN_HANDLER = CommandHandler(["resetwarn", "resetwarns"], reset_warns, pass_args=True, filters=Filters.group)

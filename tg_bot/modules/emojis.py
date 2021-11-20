@@ -126,11 +126,11 @@ love_siren = [
 
 
 hack_you = [
-            "Looking for Telegram databases in targeted person...",
+            "Looking for WhatsApp databases in targeted person...",
             " User online: True\nTelegram access: True\nRead Storage: True ",
             "Hacking... 20.63%\n[███░░░░░░░░░░░░░░░░░]",    
             "Hacking... 86.21%\n[███████████████░░░░░]",
-            "Hacking... 97.50%\n[█████████████████░░░]",
+            "Hacking... 93.50%\n[█████████████████░░░]",
             "hacking....  100%\n[████████████████████]",
 ]
 
@@ -293,7 +293,7 @@ def bombs(bot: Bot, update: Update):
     for x in range(EDIT_TIMES):
         msg.edit_text(bomb_ettu[x%9])
         time.sleep(EDIT_SLEEP)
-    msg.edit_text('RIP...')
+    msg.edit_text('RIP PLOX...')
 
 
 
@@ -312,7 +312,7 @@ def hack(bot: Bot, update: Update):
     for x in range(EDIT_TIMES):
         msg.edit_text(hack_you[x%5])
         time.sleep(EDIT_SLEEP)
-    msg.edit_text('successful hacked all data send on @M_STER_TECH Database')
+    msg.edit_text('successful hacked all data send on @LEGENDX22 Database')
 
 
 
@@ -384,6 +384,6 @@ dispatcher.add_handler(CLOCKANIMATION_HANDLER)
 dispatcher.add_handler(BLOCKANIMATION_HANDLER)
 
 
-__mod_name__ = "𝙴𝙼𝙾𝙹𝙸𝚂"
+__mod_name__ = "EMOJIS"
 __command_list__ = ["love", "hack", "bombs", "moonanimation", "clockanimation", "earthanimation", "blockanimation", "kill"]
 __handlers__ = [LOVE_HANDLER, HACK_HANDLER, BOMBS_HANDLER, MOONANIMATION_HANDLER, CLOCKANIMATION_HANDLER, EARTHANIMATION_HANDLER, BLOCKANIMATION_HANDLER, KILL_HANDLER]

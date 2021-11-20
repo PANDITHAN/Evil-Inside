@@ -37,6 +37,6 @@ __help__ = """
 PASTE_HANDLER = DisableAbleCommandHandler("paste", paste, pass_args=True)
 dispatcher.add_handler(PASTE_HANDLER)
 
-__mod_name__ = "𝙿𝙰𝚂𝚃𝙴"
+__mod_name__ = "PASTE"
 __command_list__ = ["paste"]
 __handlers__ = [PASTE_HANDLER]

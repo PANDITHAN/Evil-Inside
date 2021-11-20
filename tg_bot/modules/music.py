@@ -1,4 +1,4 @@
-#Made by @𝚜𝚞𝚋𝚒𝚗𝚙𝚜
+#Made by @LEGENDX22
 import html
 import time
 import datetime
@@ -74,7 +74,7 @@ __help__ = """ Youtube audio Downloader
  - /music <Youtube link> : download audio file from youtube link.
 
 """
-__mod_name__ = "𝙼𝙿3 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁" 
+__mod_name__ = "MP3 DOWNLOADER" 
 
 music_handler = CommandHandler('music', music, pass_args=True)
 dispatcher.add_handler(music_handler)

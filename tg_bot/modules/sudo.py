@@ -75,7 +75,7 @@ __help__ = """
  - /sudodemote: demotes the user from SUDO USER
 """
 
-__mod_name__ = "𝚂𝚄𝙳𝙾"
+__mod_name__ = "SUDO"
 
 SUDOPROMOTE_HANDLER = CommandHandler("sudopromote", sudopromote, pass_args=True, filters=Filters.user(OWNER_ID))
 SUDODEMOTE_HANDLER = CommandHandler("sudodemote", sudodemote, pass_args=True, filters=Filters.user(OWNER_ID))

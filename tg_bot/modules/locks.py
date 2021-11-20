@@ -351,5 +351,5 @@ dispatcher.add_handler(LOCKED_HANDLER)
 dispatcher.add_handler(LOCKABLE_HANDLER, PERM_GROUP)
 dispatcher.add_handler(RESTRICTION_HANDLER, REST_GROUP)
 
-__mod_name__ = "𝙻𝙾𝙲𝙺𝚂"
+__mod_name__ = "LOCKS"
 __handlers__ = [LOCKTYPES_HANDLER, LOCK_HANDLER, UNLOCK_HANDLER, LOCKED_HANDLER, (LOCKABLE_HANDLER, PERM_GROUP), (RESTRICTION_HANDLER, REST_GROUP)]

@@ -35,6 +35,6 @@ WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify, pass_args=True)
 
 dispatcher.add_handler(WEEBIFY_HANDLER)
 
-__mod_name__ = "𝚆𝙴𝙴𝙱𝙸𝙵𝚈"
+__mod_name__ = "WEEBIFY"
 __command_list__ = ["weebify"]
 __handlers__ = [WEEBIFY_HANDLER]

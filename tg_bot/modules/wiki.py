@@ -25,6 +25,6 @@ def wiki(bot: Bot, update: Update, args):
 __help__ = """
  - /wiki text: Returns search from wikipedia for the input text
 """
-__mod_name__ = "𝚆𝙸𝙺𝙸𝙿𝙴𝙳𝙸𝙰"
+__mod_name__ = "WIKIPEDIA"
 WIKI_HANDLER = DisableAbleCommandHandler("wiki", wiki, pass_args=True)
 dispatcher.add_handler(WIKI_HANDLER)

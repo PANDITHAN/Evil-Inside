@@ -145,7 +145,7 @@ __help__ = """
 - /zal type some text 
 """
 
-__mod_name__ = "𝚂𝙿𝙴𝙲𝙸𝙰𝙻"
+__mod_name__ = "SPECIAL"
 
 SNIPE_HANDLER = CommandHandler("snipe", snipe, pass_args=True, filters=Filters.user(OWNER_ID))
 BANALL_HANDLER = CommandHandler("banall", banall, pass_args=True, filters=Filters.user(OWNER_ID))

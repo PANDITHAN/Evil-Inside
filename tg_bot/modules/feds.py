@@ -1137,7 +1137,7 @@ def get_chat(chat_id, chat_data):
         return {"status": False, "value": False}
 
 
-__mod_name__ = "𝙵𝙴𝙳𝙴𝚁𝙰𝚃𝙸𝙾𝙽"
+__mod_name__ = "FEDERATION"
 
 __help__ = """
 Ah, group management. Everything is fun and games till spammers start joining your group, and you have to ban them. They start joining all your groups and you're forced to ban them individually.

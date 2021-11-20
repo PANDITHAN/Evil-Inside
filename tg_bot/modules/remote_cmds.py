@@ -426,7 +426,7 @@ def runmute(bot: Bot, update: Update, args: List[str]):
 
 __help__ = ""
 
-__mod_name__ = "𝚁𝙴𝙼𝙾𝚃𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂"
+__mod_name__ = "REMOTE COMMANDS"
 
 RBAN_HANDLER = CommandHandler("rban", rban, pass_args=True, filters=CustomFilters.sudo_filter)
 RUNBAN_HANDLER = CommandHandler("runban", runban, pass_args=True, filters=CustomFilters.sudo_filter)
