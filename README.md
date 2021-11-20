@@ -1,10 +1,10 @@
-# GRAND OFFICIAL
+
 
 <p align="center">
   <img src="PANDITHAN/Evil-Inside.jpeg" alt="Evil-Inside Logo">
 </p>
 <h1 align="center">
-  <b>Eva Maria Bot</b>
+  <b>Evil-Inside</b>
 </h1>
 
 DEPLOY HERE - [GRAND OFFICIAL](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Flegendx22%2FGRANDROBOT&template=hhttps://github.com/PANDITHAN/Evil-Inside)
