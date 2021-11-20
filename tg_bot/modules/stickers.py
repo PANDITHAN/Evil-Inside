@@ -234,7 +234,7 @@ __help__ = """
 - /kang: reply to a sticker or image to add it to your pack.
 """
 
-__mod_name__ = "STICKERS"
+__mod_name__ = "𝚂𝚃𝙸𝙲𝙺𝙴𝚁𝚂"
 STICKERID_HANDLER = DisableAbleCommandHandler("stickerid", stickerid)
 GETSTICKER_HANDLER = DisableAbleCommandHandler("getsticker", getsticker)
 KANG_HANDLER = DisableAbleCommandHandler("kang", kang, pass_args=True, admin_ok=False)
