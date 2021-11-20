@@ -45,10 +45,10 @@ def covindia(bot: Bot, update: Update):
 
 __help__ = """
  
- - /covindia <state>: Get real time COVID-19 stats for the input Indian state
+ - 𝙷𝙾𝚆 𝚃𝙾 𝙳𝙴𝙿𝙻𝙾𝚈 => 
 """
 
-__mod_name__ = 'COVID-19 VIRUS'
+__mod_name__ = '𝙳𝙴𝙿𝙻𝙾𝚈'
 
 COV_INDIA_HANDLER = CommandHandler('covindia', covindia)
 
