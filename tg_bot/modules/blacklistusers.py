@@ -1,4 +1,4 @@
-# Module to blacklist users and prevent them from using commands by @M_STER_TECH
+©by @M_STER_TECH
 from typing import List
 
 from telegram import Bot, Update, ParseMode
