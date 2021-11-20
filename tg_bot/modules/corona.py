@@ -29,7 +29,7 @@ __help__ = """
 - /corona  😷.
 """
 
-__mod_name__ = "BREAK THE CHAIN"
+__mod_name__ = "𝙱𝚁𝙴𝙰𝙺 𝚃𝙷𝙴 𝙲𝙷𝙰𝙸𝙽"
 
 CRNA_HANDLER = DisableAbleCommandHandler("corona", corona)
 
