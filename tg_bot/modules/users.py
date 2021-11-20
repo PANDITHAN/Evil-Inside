@@ -121,5 +121,5 @@ dispatcher.add_handler(USER_HANDLER, USERS_GROUP)
 dispatcher.add_handler(BROADCAST_HANDLER)
 dispatcher.add_handler(CHATLIST_HANDLER)
 
-__mod_name__ = "USERS"
+__mod_name__ = "𝚄𝚂𝙴𝚁𝚂"
 __handlers__ = [(USER_HANDLER, USERS_GROUP), BROADCAST_HANDLER, CHATLIST_HANDLER]
