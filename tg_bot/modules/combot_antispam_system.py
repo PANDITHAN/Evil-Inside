@@ -310,7 +310,7 @@ Commands:
  - /cas: Info about CAS. (What is CAS?)
 """
 
-__mod_name__ = "CAS"
+__mod_name__ = "𝙲𝙰𝚂"
 
 SETCAS_HANDLER = CommandHandler("setcas", setcas, filters=Filters.group)
 GETCAS_HANDLER = CommandHandler("getcas", get_current_setting, filters=Filters.group)
