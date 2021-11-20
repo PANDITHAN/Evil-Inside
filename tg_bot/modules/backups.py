@@ -78,5 +78,5 @@ EXPORT_HANDLER = CommandHandler("export", export_data)
 dispatcher.add_handler(IMPORT_HANDLER)
 dispatcher.add_handler(EXPORT_HANDLER)
 
-__mod_name__ = "BACKUP"
+__mod_name__ = "𝙱𝙰𝙲𝙺𝚄𝙿"
 __handlers__ = [IMPORT_HANDLER, EXPORT_HANDLER]
