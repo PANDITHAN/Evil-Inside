@@ -37,7 +37,7 @@
       },
       "OWNER_NAME": {
          "description": "Your username",
-         "value": ""
+         "value": "PANDITHAN"
       },
       "DEV_USERS": {
          "description": "ID of users who are Dev (can use /py etc.)",
