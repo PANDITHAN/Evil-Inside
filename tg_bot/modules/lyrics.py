@@ -1,4 +1,4 @@
-# Simple lyrics module using tswift by @TheRealPhoenix
+# Simple lyrics module using tswift by @𝙼_𝚂𝚃𝙴𝚁_𝚃𝙴𝙲𝙷
 
 from tswift import Song
 
@@ -44,7 +44,7 @@ Want to get the lyrics of your favorite songs straight from the app? This module
  You can either enter just the song name or both the artist and song name.
 """
 
-__mod_name__ = "SONGS LYRICS"
+__mod_name__ = "𝚂𝙾𝙽𝙶𝚂 𝙻𝚈𝚁𝙸𝙲𝚂"
 
 
 
