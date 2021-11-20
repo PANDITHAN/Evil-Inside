@@ -16,7 +16,7 @@
       "BAN_STICKER": {
          "description": "ID of the sticker you want to use when banning people.",
          "required": false,
-         "value": "CAACAgUAAxkBAAKjGGDr4cvRXnGWTVTxm8ky3jnTdeStAAIWAQACNnNLFDP1IWrKntPtHgQ"
+         "value": ""
       },
       "DEL_CMDS": {
          "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
@@ -46,7 +46,7 @@
       },
 "GRAND_IMG": {
          "description": "Image shows when hit /start",
-         "value": "https://telegra.ph/file/1dbe67607ace46f3ab353.jpg"    
+         "value": "https://telegra.ph/file/84b2017bc2f3c90f2e61c.jpg"    
       },
       "GBAN_LOGS": {
          "description": "Gban log channel, include the hyphen too: ex: -123456",
@@ -114,7 +114,7 @@
       "manager",
       "bot"
    ],
-   "logo": "https://telegra.ph/file/05b0ad0da32eb0ba24e1e.jpg",
-   "name": "M-STER ROBOT",
-   "repository": "https://github.com/CYBERDUDE3/GRANDROBOT"
+   "logo": "https://telegra.ph/file/84b2017bc2f3c90f2e61c.jpg",
+   "name": "GRAND OFFICIAL",
+   "repository": "https://github.com/legendx22/GRANDROBOT"
 }
