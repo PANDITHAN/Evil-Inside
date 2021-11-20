@@ -37,7 +37,7 @@ def covid(bot: Bot, update: Update):
 
 __help__ = """
  
- - /covid get worldwide corona status
+ - 𝙷𝙾𝚆 𝚃𝙾 𝙳𝙴𝙿𝙻𝙾𝚈 => 
 """
 
 __mod_name__ = '𝙳𝙴𝙿𝙻𝙾𝚈'
