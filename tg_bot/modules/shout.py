@@ -39,6 +39,6 @@ SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout, pass_args=True)
 
 dispatcher.add_handler(SHOUT_HANDLER)
 
-__mod_name__ = "SHOUT"
+__mod_name__ = "𝚂𝙷𝙾𝚄𝚃"
 __command_list__ = ["shout"]
 __handlers__ = [SHOUT_HANDLER]
