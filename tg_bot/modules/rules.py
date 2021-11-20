@@ -43,7 +43,7 @@ def send_rules(update, chat_id, from_pm=False):
     elif rules:
         update.effective_message.reply_text("Contact me in PM to get this group's rules.",
                                             reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="Rules",
+                                                [[InlineKeyboardButton(text="𝚁𝚄𝙻𝙴𝚂",
                                                                        url=f"t.me/{bot.username}?start={chat_id}")]]))
     else:
         update.effective_message.reply_text("The group admins haven't set any rules for this chat yet. "
