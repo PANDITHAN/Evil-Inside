@@ -133,4 +133,4 @@ dispatcher.add_handler(eval_handler)
 dispatcher.add_handler(exec_handler)
 dispatcher.add_handler(clear_handler)
 
-__mod_name__ = "Ev𝚒l 𝙼𝚘𝚍𝚞𝚕𝚎"
+__mod_name__ ="𝙴𝚅𝙸𝙻 𝙼𝚘𝚍𝚞𝚕𝚎"
