@@ -143,11 +143,11 @@ def start(bot: Bot, update: Update, args: List[str]):
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
                 parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="𝙷𝙴𝙻𝙿",
                                                                        callback_data="help_back".format(bot.username)),
-                                                                                   InlineKeyboardButton(text="𝚄𝙿𝙳𝙰𝚃𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻",
-                                                                       url="t.me/teamishere")],
+                                                                                   InlineKeyboardButton(text="𝙲𝙷𝙰𝙽𝙽𝙴𝙻",
+                                                                       url="t.me/M_STER_TECH")],
                                                                                    [InlineKeyboardButton(text= "𝙳𝙴𝙿𝙻𝙾𝚈",
                                                                        url="t.me/M_STER_TECH".format(bot.username)),
-                                                                                   InlineKeyboardButton(text="𝚂𝚘𝚞𝚛𝚌𝚎 𝚌𝚘𝚍𝚎",
+                                                                                   InlineKeyboardButton(text="𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙾𝙳𝙴",
                                                                        url="https://github.com/PANDITHAN/Evil-Inside")
                                                                                  ]]))
 
