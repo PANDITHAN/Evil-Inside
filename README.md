@@ -14,6 +14,8 @@
 HOW TO DEPLOY - [vedio coming soon](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Flegendx22%2FGRANDROBOT&template=hhttps://github.com/PANDITHAN/Evil-Inside)
 [.](https://heroku.com/deploy)
 
+DEMO BOT - [Evil-Inside](https://telegram.dog/Evil_Inside_robot) 
+
 Hello i am TELEGRAM GROUP MANAGEMENT BOT MY NAME IS Evil-Inside ⚡ i have both amazing modules you can install me on your bot contact me on Telegram
 
 <h3 align="center">ℂ𝕆ℕ𝕋𝔸ℂ𝕋 𝕄𝔼 𝕆ℕ<img align="center" src="https://github.com/PANDITHAN/PANDITHAN/blob/main/assets/Handshake.gif" height="33px" /></h3>
