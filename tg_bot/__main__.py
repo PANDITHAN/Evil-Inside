@@ -51,7 +51,7 @@ HELP_STRINGS = """
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-TECHNO_IMG = "https://telegra.ph/file/8d8a7e610ca33690a6775.jpg"
+TECHNO_IMG = "https://telegra.ph/file/10cf6a74f348caa0096b9.jpg"
 IMPORTED = {}
 MIGRATEABLE = []
 HELPABLE = {}
