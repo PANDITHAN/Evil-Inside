@@ -44,7 +44,7 @@
          "required": false,
          "value": ""
       },
-"GRAND_IMG": {
+      "GRAND_IMG": {
          "description": "Image shows when hit /start",
          "value": "https://telegra.ph/file/8d8a7e610ca33690a6775.jpg"    
       },
