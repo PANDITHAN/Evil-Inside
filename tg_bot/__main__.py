@@ -48,7 +48,7 @@ HELP_STRINGS = """
 
 
 {}
-And the following:
+𝙰𝚗𝚍 𝚝𝚑𝚎 𝚏𝚘𝚕𝚕𝚘𝚠𝚒𝚗𝚐:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
 TECHNO_IMG = "https://telegra.ph/file/10cf6a74f348caa0096b9.jpg"
