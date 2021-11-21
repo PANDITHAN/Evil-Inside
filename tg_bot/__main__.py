@@ -49,7 +49,7 @@ HELP_STRINGS = """
 
 {}
 𝙰𝚗𝚍 𝚝𝚑𝚎 𝚏𝚘𝚕𝚕𝚘𝚠𝚒𝚗𝚐:
-""".format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
+""".format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\n𝙰𝚕𝚕 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜 𝚌𝚊𝚗 𝚎𝚒𝚝𝚑𝚎𝚛 𝚋𝚎 𝚞𝚜𝚎𝚍 𝚠𝚒𝚝𝚑 / 𝚘𝚛 !.\n")
 
 TECHNO_IMG = "https://telegra.ph/file/10cf6a74f348caa0096b9.jpg"
 IMPORTED = {}
