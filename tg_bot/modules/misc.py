@@ -113,20 +113,20 @@ def info(bot: Bot, update: Update, args: List[str]):
     else:
         return
 
-    text = (f"<b>user information:</b>\n"
-            f"🆔️ID: <code>{user.id}</code>\n"
-            f"👤First Name: {html.escape(user.first_name)}")
+    text = (f"<b>𝙪𝙨𝙚𝙧 𝙞𝙣𝙛𝙤𝙧𝙢𝙖𝙩𝙞𝙤𝙣:</b>\n"
+            f"🆔️𝙸𝙳: <code>{user.id}</code>\n"
+            f"👤𝙵𝚒𝚛𝚜𝚝 𝙽𝚊𝚖𝚎: {html.escape(user.first_name)}")
 
     if user.last_name:
-        text += f"\n👤Last Name: {html.escape(user.last_name)}"
+        text += f"\n👤𝙻𝚊𝚜𝚝 𝙽𝚊𝚖𝚎: {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n👤Username: @{html.escape(user.username)}"
+        text += f"\n👤𝚄𝚜𝚎𝚛𝚗𝚊𝚖𝚎: @{html.escape(user.username)}"
 
-    text += f"\n👤Permanent user link: {mention_html(user.id, 'link')}"
+    text += f"\n👤𝚞𝚜𝚎𝚛 𝚕𝚒𝚗𝚔: {mention_html(user.id, 'link')}"
 
     num_chats = sql.get_user_num_chats(user.id)
-    text += f"\n🌍Chat count: <code>{num_chats}</code>"
+    text += f"\n🌍𝙲𝚑𝚊𝚝 𝚌𝚘𝚞𝚗𝚝: <code>{num_chats}</code>"
 
     try:
         user_member = chat.get_member(user.id)
@@ -141,23 +141,23 @@ def info(bot: Bot, update: Update, args: List[str]):
 
     disaster_level_present = False
 
-    if user.id == OWNER_ID:
-        text += "\n😎The Disaster level of this person is 'LEGEND'."
+    if user.id == 𝙤𝙬𝙣𝙚𝙧_𝙞𝙙:
+        text += "\n😎𝚃𝚑𝚎 𝙳𝚒𝚜𝚊𝚜𝚝𝚎𝚛 𝚕𝚎𝚟𝚎𝚕 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚎𝚛𝚜𝚘𝚗 𝚒𝚜 'LEGEND'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n🔥This member is one of 'Hero Association'."
+        text += "\n🔥𝚃𝚑𝚒𝚜 𝚖𝚎𝚖𝚋𝚎𝚛 𝚒𝚜 𝚘𝚗𝚎 𝚘𝚏 'Hero Association'."
         disaster_level_present = True
     elif user.id in SUDO_USERS:
-        text += "\n🔥The Disaster level of this person is 'Dragon'."
+        text += "\n🔥𝚃𝚑𝚎 𝙳𝚒𝚜𝚊𝚜𝚝𝚎𝚛 𝚕𝚎𝚟𝚎𝚕 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚎𝚛𝚜𝚘𝚗 𝚒𝚜 'Dragon'."
         disaster_level_present = True
     elif user.id in SUPPORT_USERS:
-        text += "\n🔥The Disaster level of this person is 'HACKER'."
+        text += "\n🔥𝚃𝚑𝚎 𝙳𝚒𝚜𝚊𝚜𝚝𝚎𝚛 𝚕𝚎𝚟𝚎𝚕 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚎𝚛𝚜𝚘𝚗 𝚒𝚜 'HACKER'."
         disaster_level_present = True
     elif user.id in TIGER_USERS:
-        text += "\n🔥The Disaster level of this person is 'Tiger'."
+        text += "\n🔥𝚃𝚑𝚎 𝙳𝚒𝚜𝚊𝚜𝚝𝚎𝚛 𝚕𝚎𝚟𝚎𝚕 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚎𝚛𝚜𝚘𝚗 𝚒𝚜 'Tiger'."
         disaster_level_present = True
     elif user.id in WHITELIST_USERS:
-        text += "\n🔥The Disaster level of this person is 'Wolf'."
+        text += "\n🔥𝚃𝚑𝚎 𝙳𝚒𝚜𝚊𝚜𝚝𝚎𝚛 𝚕𝚎𝚟𝚎𝚕 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚎𝚛𝚜𝚘𝚗 𝚒𝚜 'Wolf'."
         disaster_level_present = True
 
     if disaster_level_present:
