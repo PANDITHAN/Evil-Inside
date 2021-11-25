@@ -28,9 +28,13 @@ Hello i am TELEGRAM GROUP MANAGEMENT BOT MY NAME IS Evil-Inside ⚡ i have both 
 </p>
 
 - `AI_API_KEY` : for activate chatbot {`x_y_z`}
+
 - `ALLOW_EXCL` : Set this to True if you want ! to be a command prefix along with / {`True`}
+
 - `API_OPENWEATHER` : Required for weather information {`5c5adc2bc1832de6943e3f4467e84c39`}
+
 - `BAN_STICKER ` : ID of the sticker you want to use when banning people from @MT_ID_Bot
+
 - `CASH_API_KEY` : Required for currency converter {`-xyz`}
 - `DEL_CMDS` : Set this to True if you want to delete command messages from users who don't have the perms to run that command. {`True`}
 - `DEV_USERS` : ID of users who are Dev (can use /py etc.) from @MT_ID_Bot
