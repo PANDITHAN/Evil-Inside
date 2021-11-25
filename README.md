@@ -23,9 +23,9 @@ Hello i am TELEGRAM GROUP MANAGEMENT BOT MY NAME IS Evil-Inside ⚡ i have both 
 <a href="https://t.me/M_STER_TECH"><img alt="Telegram" src="https://img.shields.io/badge/𝙲𝙷𝙰𝙽𝙽𝙴𝙻-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/></a>
 </p>
 
-<p align="center">
-𝐂𝐨𝐧𝐟𝐢𝐠 𝐕𝐚𝐫𝐬
-</p>
+
+# 𝐂𝐨𝐧𝐟𝐢𝐠 𝐕𝐚𝐫𝐬
+
 
 - `AI_API_KEY` : for activate chatbot {`x_y_z`}
 
