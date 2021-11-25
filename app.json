@@ -7,14 +7,14 @@
          "plan": "heroku-postgresql"
       }
    ],
-   "description": "Telegram group management bot.",
+   "description": "Telegram Advanced group management bot.",
    "env": {
       "ALLOW_EXCL": {
          "description": "Set this to True if you want ! to be a command prefix along with /",
          "value": "True"
       },
       "BAN_STICKER": {
-         "description": "ID of the sticker you want to use when banning people.",
+         "description": "ID of the sticker you want to use when banning people. Watch Video (check out Redme.md) ",
          "required": false,
          "value": ""
       },
@@ -24,12 +24,12 @@
       },
       "ENV": {
          "description": "Setting this to ANYTHING will enable environment variables.",
-         "value": "ANYTHING"
+         "value": ""
       },
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, empty this field if you dont have one.",
          "required": false,
-         "value": "sqldbtype://username:pw@hostname:port/db_name"
+         "value": ""
       },      
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
@@ -45,7 +45,7 @@
          "value": ""
       },
       "GRAND_IMG": {
-         "description": "Image shows when hit /start",
+         "description": "Image shows when hit /start @MT_TelegraPH_Bot",
          "value": "https://telegra.ph/file/8d8a7e610ca33690a6775.jpg"    
       },
       "GBAN_LOGS": {
@@ -57,16 +57,16 @@
          "value": "-xyz"
       },
       "TIME_API_KEY": {
-         "description": "Required for timezone information",
-         "value": "HW6LQCYX43HS"
+         "description": "Required for timezone information Watch Video (check out Redme.md)",
+         "value": ""
       },
       "AI_API_KEY": {
          "description": "for activate chatbot",
          "value": "x_y_z"
       },
       "API_OPENWEATHER": {
-         "description": "Required for weather information",
-         "value": "5c5adc2bc1832de6943e3f4467e84c39"
+         "description": "Required for weather information Watch Video (check out Redme.md)",
+         "value": ""
       },
       "PORT": {
          "description": "Port to use for your webhooks.",
