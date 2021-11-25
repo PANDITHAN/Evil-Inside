@@ -27,8 +27,7 @@
          "value": ""
       },
       "SQLALCHEMY_DATABASE_URI": {
-         "description": "Your postgres sql db, empty this field if you dont have one.",
-         "required": false,
+         "description": "Your postgres sql db, empty this field if you dont have one. Watch Video (check out Redme.md)",
          "value": ""
       },      
       "OWNER_ID": {
@@ -94,7 +93,6 @@
       },
       "URL": {
          "description": "The Heroku App URL :-  https://<appname>.herokuapp.com/",
-         "required": false,
          "value": ""
       },
       "WEBHOOK": {
