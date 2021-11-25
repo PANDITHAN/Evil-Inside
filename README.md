@@ -68,6 +68,10 @@ Hello i am TELEGRAM GROUP MANAGEMENT BOT MY NAME IS Evil-Inside ⚡ i have both 
 
 - `WHITELIST_USERS` : A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.
 
+# 𝐂𝐫𝐞𝐝𝐢𝐭𝐬
+- Thanks To [Pyrogram](https://github.com/pyrogram/pyrogram)
+- [Thanks To Me ](https://github.com/PANDITHAN)
+- Thanks To [Muhammad](https://github.com/PR0FESS0R-99)
 
 
 
