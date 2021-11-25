@@ -43,7 +43,7 @@
          "required": false,
          "value": ""
       },
-      "GRAND_IMG": {
+      "START_PHOTTO": {
          "description": "Image shows when hit /start @MT_TelegraPH_Bot",
          "value": "https://telegra.ph/file/8d8a7e610ca33690a6775.jpg"    
       },
