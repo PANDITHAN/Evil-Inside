@@ -72,6 +72,7 @@ Hello i am TELEGRAM GROUP MANAGEMENT BOT MY NAME IS Evil-Inside ⚡ i have both 
 - Thanks To [Pyrogram](https://github.com/pyrogram/pyrogram)
 - [Thanks To Me ](https://github.com/PANDITHAN)
 - Thanks To [Muhammad](https://github.com/PR0FESS0R-99)
+- Thanks to [Lallu](https://github.com/Lallu-lallus) 
 
 
 
