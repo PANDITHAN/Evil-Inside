@@ -42,7 +42,7 @@ Hello i am TELEGRAM GROUP MANAGEMENT BOT MY NAME IS Evil-Inside ⚡ i have both 
 
 - `GBAN_LOGS` Gban log channel, include the hyphen too: ex: -100××××× {`-123`}
 
-- `GRAND_IMG` : Image shows when hit /start from @MT_TelegraPH_Bot
+- `START_PIC` : Image shows when hit /start from @MT_TelegraPH_Bot
 
 - `OWNER_ID` : Your user ID as an integer. from @MT_ID_Bot
 
