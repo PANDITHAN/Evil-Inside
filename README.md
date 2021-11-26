@@ -105,7 +105,7 @@ Hello i am TELEGRAM GROUP MANAGEMENT BOT MY NAME IS Evil-Inside ⚡ i have both 
 
 # 𝐂𝐫𝐞𝐝𝐢𝐭𝐬
 - [Thanks To Me ](https://github.com/PANDITHAN)
-- Thanks To [Muhammad](https://github.com/PR0FESS0R-99)
+- Thanks To [Muhammed](https://github.com/PR0FESS0R-99)
 - Thanks To [Lallu](https://github.com/Lallu-lallus) 
 - Thanks To [CLaY995](https://github.com/CLaY9950) 
 - Thanks To [ViruZs](https://github.com/TGExplore) 
