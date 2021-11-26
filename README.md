@@ -18,15 +18,15 @@ Hello i am TELEGRAM GROUP MANAGEMENT BOT MY NAME IS Evil-Inside ⚡ i have both 
 
 
 # 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬
-- Admin
-- AFK
-- Anti Flood
-- Backup
-- Ban
-- Bios & About
-- Break The Chain
-- Biuetext Cleaning
-- Cas
+* Admin
+* AFK
+* Anti Flood
+* Backup
+* Ban
+* Bios & About
+* Break The Chain
+* Biuetext Cleaning
+* Cas
 * Chat Bot
 * Command Disabling
 * Connection
