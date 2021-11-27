@@ -25,6 +25,11 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 
 
+SOURCE_STRING = """
+⚡I'm built in python3, using the python-telegram-bot library, and am fully opensource - you can find what makes me tick [here](https://github.com/PANDITHAN/Evil-Inside)
+⚡You Can Clone Me [Here](https://heroku.com/deploy?template=https://github.com/PANDITHAN/Evil-Inside)
+"""
+
 PM_START_TEXT = """
 *𝙷𝚢 {} , 𝙼𝚢 𝙽𝚊𝚖𝚎 𝚒𝚜 {}!*
 
