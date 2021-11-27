@@ -37,10 +37,10 @@ def covid(bot: Bot, update: Update):
 
 __help__ = """
  
- - 𝙷𝙾𝚆 𝚃𝙾 𝙳𝙴𝙿𝙻𝙾𝚈 => 
+ - How To Deploy => https://youtu.be/Bz8AUvN5bSo
 """
 
-__mod_name__ = '𝙳𝙴𝙿𝙻𝙾𝚈'
+__mod_name__ = 'Deploy'
 
 COVID_HANDLER = CommandHandler("covid", covid, admin_ok=True)
 dispatcher.add_handler(COVID_HANDLER)
