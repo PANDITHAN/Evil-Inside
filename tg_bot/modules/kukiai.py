@@ -19,7 +19,7 @@ from telegram.utils.helpers import mention_html, mention_markdown, escape_markdo
 
 from tg_bot.modules.helper_funcs.filters import CustomFilters
 from tg_bot.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
-from tg_bot import dispatcher, updater
+from tg_bot import dispatcher, updater, LOGGER
 from tg_bot.modules.log_channel import gloggable
 
  
