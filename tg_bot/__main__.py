@@ -487,7 +487,7 @@ def main():
     IMDB_SEARCHDATA_HANDLER = CallbackQueryHandler(imdb_searchdata)
     settings_handler = CommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
-    source_handler = Command_Handler("source", source)
+    source_handler = CommandHandler("source", source)
 
    
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
