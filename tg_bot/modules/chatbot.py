@@ -90,11 +90,11 @@ def chatbot(bot: Bot, update: Update):
 __mod_name__ = "CHAT BOT"
 
 __help__ = """
+<b> Chatbot </b>
+Nazriya AI 3.0 
+ - /chatbot [ON/OFF]: Enables and disables AI Chat mode (EXCLUSIVE)
+  POWERED BY [KUKI](https://www.kukiapi.xyz) 
 
-Powered by CoffeeHouse (https://coffeehouse.intellivoid.net/) from @Intellivoid
-
- - /addchat : Enables Chatbot mode in the chat.
- - /rmchat  : Disables Chatbot mode in the chat.
 """
                   
 ADD_CHAT_HANDLER = CommandHandler("addchat", add_chat, filters=CustomFilters.dev_filter)
