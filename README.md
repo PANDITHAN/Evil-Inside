@@ -28,7 +28,7 @@ Hello i am TELEGRAM GROUP MANAGEMENT BOT MY NAME IS Evil-Inside ⚡ i have both 
 * Break The Chain
 * Biuetext Cleaning
 * Cas
-* Chat Bot
+* Chat Bot With Kuki api key. 
 * Command Disabling
 * Connection
 * Covid 19 Tracker
@@ -61,7 +61,7 @@ Hello i am TELEGRAM GROUP MANAGEMENT BOT MY NAME IS Evil-Inside ⚡ i have both 
 # 𝐂𝐨𝐧𝐟𝐢𝐠 𝐕𝐚𝐫𝐬
 
 
-- `AI_API_KEY` : for activate chatbot {`x_y_z`}
+- `AI_API_KEY` : for activate chatbot {`x_y_z`} & Remember One Thing Coffeehouse API key Is No more Use Kuki chat bot. No need of taking Kuki api key we have already added a api key of ours. 
 
 - `ALLOW_EXCL` : Set this to True if you want ! to be a command prefix along with / {`True`}
 
