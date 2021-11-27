@@ -138,7 +138,7 @@ def list_all_chats(update: Update, context: CallbackContext):
     update.effective_message.reply_text(text, parse_mode="HTML")
 
 
-CHATBOTK_HANDLER = CommandHandler("addchat", kuki)#, run_async=True)
+CHATBOTK_HANDLER = CommandHandler("chatbot", kuki)#, run_async=True)
 ADD_CHAT_HANDLER = CallbackQueryHandler(kukiadd, pattern=r"add_chat")
 RM_CHAT_HANDLER = CallbackQueryHandler(kukirm, pattern=r"rm_chat")
 CHATBOT_HANDLER = MessageHandler(
