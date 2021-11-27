@@ -50,7 +50,8 @@ Hello i am TELEGRAM GROUP MANAGEMENT BOT MY NAME IS Evil-Inside ⚡ i have both 
 * Image Search
 * Locks
 
-# 𝐇𝐎𝐖 𝐓𝐎 𝐃𝐄𝐏𝐋𝐎𝐘 - [CLICK HERE](https://youtu.be/Bz8AUvN5bSo)
+# 𝐇𝐎𝐖 𝐓𝐎 𝐃𝐄𝐏𝐋𝐎𝐘 
+ [CLICK HERE](https://youtu.be/Bz8AUvN5bSo)
 
 # 𝐃𝐞𝐩𝐥𝐨𝐲 𝐓𝐨 𝐇𝐞𝐫𝐨𝐤𝐮
 <p align="center">
