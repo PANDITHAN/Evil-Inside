@@ -16,10 +16,11 @@ psutil
 aiohttp>=2.2.5
 Pillow>=4.2.0
 CurrencyConverter
-googletrans
+googletrans==3.1.0a0
+google_trans_new
 jikanpy
 speedtest-cli
-coffeehouse
+coffeehouse==2.2.4
 tswift
 gTTS
 wikipedia
