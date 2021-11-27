@@ -146,7 +146,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                                                                                    InlineKeyboardButton(text="𝙲𝙷𝙰𝙽𝙽𝙴𝙻",
                                                                        url="t.me/M_STER_TECH")],
                                                                                    [InlineKeyboardButton(text= "𝙳𝙴𝙿𝙻𝙾𝚈",
-                                                                       url="t.me/M_STER_TECH".format(bot.username)),
+                                                                       url="https://youtu.be/Bz8AUvN5bSo"),
                                                                                    InlineKeyboardButton(text="𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙾𝙳𝙴",
                                                                        url="https://github.com/PANDITHAN/Evil-Inside")
                                                                                  ]]))
