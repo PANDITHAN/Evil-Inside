@@ -51,7 +51,10 @@ Hello i am TELEGRAM GROUP MANAGEMENT BOT MY NAME IS Evil-Inside ⚡ i have both 
 * Locks
 
 # 𝐇𝐎𝐖 𝐓𝐎 𝐃𝐄𝐏𝐋𝐎𝐘 
-# [CLICK HERE](https://youtu.be/Bz8AUvN5bSo)
+<p align="center">
+<a href="https://youtu.be/Bz8AUvN5bSo"><img <a href="https://github.com/PANDITHAN"><img src="https://github.com/PANDITHAN/VEDIO-BUTTON/blob/main/BUTTON/BUTTON_POWERED_BY-M-STER.png" alt="PANDITHAN" border="0" height="125" width="200" align="center" /></a>
+</p>
+
 
 # 𝐃𝐞𝐩𝐥𝐨𝐲 𝐓𝐨 𝐇𝐞𝐫𝐨𝐤𝐮
 <p align="center">
