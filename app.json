@@ -44,7 +44,7 @@
          "value": ""
       },
       "START_PIC": {
-         "description": "Image shows when hit /start @MT_TelegraPH_Bot",
+         "description": "Image shows when hit, users can can multiple photospace,pliting photo with space, togetpic: /start @MT_TelegraPH_Bot",
          "value": "https://telegra.ph/file/8d8a7e610ca33690a6775.jpg"    
       },
       "GBAN_LOGS": {
