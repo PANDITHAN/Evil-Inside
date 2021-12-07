@@ -114,6 +114,6 @@ Hello i am TELEGRAM GROUP MANAGEMENT BOT MY NAME IS Evil-Inside ⚡ i have both 
 - Thanks To [Lallu](https://github.com/Lallu-lallus) 
 - Thanks To [CLaY995](https://github.com/CLaY9950) 
 - Thanks To [ViruZs](https://github.com/TGExplore) 
-- Thanks To [DudE Hacks](https:telegram.dog/DudEhacks105) 
+- Thanks To [DudE Hacks](https://t.me/DudEhacks105) 
 
 
