@@ -35,17 +35,16 @@ def setcas(bot: Bot, update: Update):
         msg.reply_text("Invalid arguments!")
         return
     param = split_msg[1]
-    if param == "on" or param == "true":
+    if param in ["on", "true"]:
         sql.set_cas_status(chat.id, True)
         msg.reply_text("Successfully updated configuration.")
-        return
-    elif param == "off" or param == "false":
+    elif param in ["off", "false"]:
         sql.set_cas_status(chat.id, False)
         msg.reply_text("Successfully updated configuration.")
-        return
     else:
         msg.reply_text("Invalid status to set!") #on or off ffs
-        return
+
+    return
 
 @run_async
 @user_admin
@@ -57,17 +56,16 @@ def setban(bot: Bot, update: Update):
         msg.reply_text("Invalid arguments!")
         return
     param = split_msg[1]
-    if param == "on" or param == "true":
+    if param in ["on", "true"]:
         sql.set_cas_autoban(chat.id, True)
         msg.reply_text("Successfully updated configuration.")
-        return
-    elif param == "off" or param == "false":
+    elif param in ["off", "false"]:
         sql.set_cas_autoban(chat.id, False)
         msg.reply_text("Successfully updated configuration.")
-        return
     else:
         msg.reply_text("Invalid autoban definition to set!") #on or off ffs
-        return
+
+    return
 
 @run_async
 @user_admin
@@ -120,7 +118,7 @@ def caschecker(bot: Bot, update: Update, args: List[str]):
     user_id = extract_user(update.effective_message, args)
     if user_id and int(user_id) != 777000:
         user = bot.get_chat(user_id)
-    elif user_id and int(user_id) == 777000:
+    elif user_id:
         msg.reply_text("This is Telegram. Unless you manually entered this reserved account's ID, it is likely a broadcast from a linked channel.")
         return
     elif not msg.reply_to_message and not args:
@@ -231,17 +229,16 @@ def setDefense(bot: Bot, update: Update, args: List[str]):
         msg.reply_text("Invalid arguments!")
         return
     param = args[0]
-    if param == "on" or param == "true":
+    if param in ["on", "true"]:
         sql.setDefenseStatus(chat.id, True)
         msg.reply_text("Defense mode has been turned on, this group is under attack. Every user that now joins will be auto kicked.")
-        return
-    elif param == "off" or param == "false":
+    elif param in ["off", "false"]:
         sql.setDefenseStatus(chat.id, False)
         msg.reply_text("Defense mode has been turned off, group is no longer under attack.")
-        return
     else:
-        msg.reply_text("Invalid status to set!") #on or off ffs
-        return 
+        msg.reply_text("Invalid status to set!") #on or off ffs 
+
+    return 
 
 @run_async
 @user_admin

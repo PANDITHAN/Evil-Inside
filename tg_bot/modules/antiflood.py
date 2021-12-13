@@ -75,11 +75,11 @@ def set_flood(bot: Bot, update: Update, args: List[str]) -> str:
     else:
         chat_name = f" in <b>{update_chat_title}</b>"
 
-    if len(args) >= 1:
+    if args:
 
         val = args[0].lower()
 
-        if val == "off" or val == "no" or val == "0":
+        if val in ["off", "no", "0"]:
             sql.set_flood(chat.id, 0)
             message.reply_text("Antiflood has been disabled{}.".format(chat_name), parse_mode=ParseMode.HTML)
 
@@ -93,11 +93,8 @@ def set_flood(bot: Bot, update: Update, args: List[str]) -> str:
                                f"<b>Admin</b>: {mention_html(user.id, user.first_name)}\n"
                                f"Disabled antiflood.")
 
-                return log_message
             elif amount < 3:
                 message.reply_text("Antiflood has to be either 0 (disabled), or a number bigger than 3!")
-                return log_message
-
             else:
                 sql.set_flood(chat.id, amount)
                 message.reply_text("Antiflood has been updated and set to {}{}".format(amount, chat_name),
@@ -107,7 +104,7 @@ def set_flood(bot: Bot, update: Update, args: List[str]) -> str:
                                f"<b>Admin</b>: {mention_html(user.id, user.first_name)}\n"
                                f"Set antiflood to <code>{amount}</code>.")
 
-                return log_message
+            return log_message
         else:
             message.reply_text("Unrecognised argument - please use a number, 'off', or 'no'.")
 

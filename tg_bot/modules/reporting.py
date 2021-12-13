@@ -22,7 +22,7 @@ def report_setting(bot: Bot, update: Update, args: List[str]):
     msg = update.effective_message
 
     if chat.type == chat.PRIVATE:
-        if len(args) >= 1:
+        if args:
             if args[0] in ("yes", "on"):
                 sql.set_user_setting(chat.id, True)
                 msg.reply_text("Turned on reporting! You'll be notified whenever anyone reports something.")
@@ -34,19 +34,18 @@ def report_setting(bot: Bot, update: Update, args: List[str]):
             msg.reply_text(f"Your current report preference is: `{sql.user_should_report(chat.id)}`",
                            parse_mode=ParseMode.MARKDOWN)
 
-    else:
-        if len(args) >= 1:
-            if args[0] in ("yes", "on"):
-                sql.set_chat_setting(chat.id, True)
-                msg.reply_text("Turned on reporting! Admins who have turned on reports will be notified when /report "
-                               "or @admin are called.")
+    elif args:
+        if args[0] in ("yes", "on"):
+            sql.set_chat_setting(chat.id, True)
+            msg.reply_text("Turned on reporting! Admins who have turned on reports will be notified when /report "
+                           "or @admin are called.")
 
-            elif args[0] in ("no", "off"):
-                sql.set_chat_setting(chat.id, False)
-                msg.reply_text("Turned off reporting! No admins will be notified on /report or @admin.")
-        else:
-            msg.reply_text(f"This chat's current setting is: `{sql.chat_should_report(chat.id)}`",
-                           parse_mode=ParseMode.MARKDOWN)
+        elif args[0] in ("no", "off"):
+            sql.set_chat_setting(chat.id, False)
+            msg.reply_text("Turned off reporting! No admins will be notified on /report or @admin.")
+    else:
+        msg.reply_text(f"This chat's current setting is: `{sql.chat_should_report(chat.id)}`",
+                       parse_mode=ParseMode.MARKDOWN)
 
 
 @run_async

@@ -121,7 +121,10 @@ def button(bot: Bot, update: Update) -> str:
                     f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
                     f"<b>User:</b> {mention_html(user_member.user.id, user_member.user.first_name)}")
         else:
-            update.effective_message.edit_text(f"User already has no warns.", parse_mode=ParseMode.HTML)
+            update.effective_message.edit_text(
+                'User already has no warns.', parse_mode=ParseMode.HTML
+            )
+
 
     return ""
 
@@ -209,13 +212,12 @@ def add_warn_filter(bot: Bot, update: Update):
 
     extracted = split_quotes(args[1])
 
-    if len(extracted) >= 2:
-        # set trigger -> lower, so as to avoid adding duplicate filters with different cases
-        keyword = extracted[0].lower()
-        content = extracted[1]
-
-    else:
+    if len(extracted) < 2:
         return
+
+    # set trigger -> lower, so as to avoid adding duplicate filters with different cases
+    keyword = extracted[0].lower()
+    content = extracted[1]
 
     # Note: perhaps handlers can be removed somehow using sql.get_chat_filters
     for handler in dispatcher.handlers.get(WARN_HANDLER_GROUP, []):
@@ -278,7 +280,7 @@ def list_warn_filters(bot: Bot, update: Update):
         else:
             filter_list += entry
 
-    if not filter_list == CURRENT_WARNING_FILTER_STRING:
+    if filter_list != CURRENT_WARNING_FILTER_STRING:
         update.effective_message.reply_text(filter_list, parse_mode=ParseMode.HTML)
 
 
@@ -372,7 +374,7 @@ def __stats__():
 
 def __import_data__(chat_id, data):
     for user_id, count in data.get('warns', {}).items():
-        for x in range(int(count)):
+        for _ in range(int(count)):
             sql.warn_user(user_id, chat_id)
 
 

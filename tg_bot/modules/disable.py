@@ -70,10 +70,7 @@ if is_module_loaded(FILENAME):
 
             chat = update.effective_chat
             if super().check_update(update):
-                if sql.is_command_disabled(chat.id, self.friendly):
-                    return False
-                else:
-                    return True
+                return not sql.is_command_disabled(chat.id, self.friendly)
 
 
     class DisableAbleRegexHandler(RegexHandler):
@@ -85,10 +82,7 @@ if is_module_loaded(FILENAME):
         def check_update(self, update):
             chat = update.effective_chat
             if super().check_update(update):
-                if sql.is_command_disabled(chat.id, self.friendly):
-                    return False
-                else:
-                    return True
+                return not sql.is_command_disabled(chat.id, self.friendly)
 
 
     @run_async
@@ -96,7 +90,7 @@ if is_module_loaded(FILENAME):
     @user_admin
     def disable(bot: Bot, update: Update, args: List[str]):
         chat = update.effective_chat
-        if len(args) >= 1:
+        if args:
             disable_cmd = args[0]
             if disable_cmd.startswith(CMD_STARTERS):
                 disable_cmd = disable_cmd[1:]
@@ -117,7 +111,7 @@ if is_module_loaded(FILENAME):
     @user_admin
     def disable_module(bot: Bot, update: Update, args: List[str]):
         chat = update.effective_chat
-        if len(args) >= 1:
+        if args:
             disable_module = "tg_bot.modules." + args[0].rsplit(".", 1)[0]
 
             try:
@@ -165,7 +159,7 @@ if is_module_loaded(FILENAME):
     def enable(bot: Bot, update: Update, args: List[str]):
 
         chat = update.effective_chat
-        if len(args) >= 1:
+        if args:
             enable_cmd = args[0]
             if enable_cmd.startswith(CMD_STARTERS):
                 enable_cmd = enable_cmd[1:]
@@ -186,7 +180,7 @@ if is_module_loaded(FILENAME):
     def enable_module(bot: Bot, update: Update, args: List[str]):
         chat = update.effective_chat
 
-        if len(args) >= 1:
+        if args:
             enable_module = "tg_bot.modules." + args[0].rsplit(".", 1)[0]
 
             try:
@@ -232,9 +226,11 @@ if is_module_loaded(FILENAME):
     @user_admin
     def list_cmds(bot: Bot, update: Update):
         if DISABLE_CMDS + DISABLE_OTHER:
-            result = ""
-            for cmd in set(DISABLE_CMDS + DISABLE_OTHER):
-                result += f" - `{escape_markdown(cmd)}`\n"
+            result = "".join(
+                f" - `{escape_markdown(cmd)}`\n"
+                for cmd in set(DISABLE_CMDS + DISABLE_OTHER)
+            )
+
             update.effective_message.reply_text(f"The following commands are toggleable:\n{result}",
                                                 parse_mode=ParseMode.MARKDOWN)
         else:
@@ -247,9 +243,7 @@ if is_module_loaded(FILENAME):
         if not disabled:
             return "No commands are disabled!"
 
-        result = ""
-        for cmd in disabled:
-            result += " - `{}`\n".format(escape_markdown(cmd))
+        result = "".join(" - `{}`\n".format(escape_markdown(cmd)) for cmd in disabled)
         return "The following commands are currently restricted:\n{}".format(result)
 
 

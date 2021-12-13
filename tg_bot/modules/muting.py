@@ -17,25 +17,21 @@ from tg_bot.modules.log_channel import loggable
 
 def check_user(user_id: int, bot: Bot, chat: Chat) -> Optional[str]:
     if not user_id:
-        reply = "You don't seem to be referring to a user."
-        return reply
+        return "You don't seem to be referring to a user."
 
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
         if excp.message == "User not found":
-            reply = "I can't seem to find this user"
-            return reply
+            return "I can't seem to find this user"
         else:
             raise
 
     if user_id == bot.id:
-        reply = "I'm not gonna MUTE myself, How high are you?"
-        return reply
+        return "I'm not gonna MUTE myself, How high are you?"
 
     if is_user_admin(chat, user_id, member) or user_id in TIGER_USERS:
-        reply = "I really wish I could mute admins...Perhaps a Punch?"
-        return reply
+        return "I really wish I could mute admins...Perhaps a Punch?"
 
     return None
 
@@ -96,28 +92,27 @@ def unmute(bot: Bot, update: Update, args: List[str]) -> str:
 
     member = chat.get_member(int(user_id))
 
-    if member.status != 'kicked' and member.status != 'left':
-        if (member.can_send_messages
-                and member.can_send_media_messages
-                and member.can_send_other_messages
-                and member.can_add_web_page_previews):
-            message.reply_text("This user already has the right to speak.")
-        else:
-            bot.restrict_chat_member(chat.id, int(user_id),
-                                     can_send_messages=True,
-                                     can_send_media_messages=True,
-                                     can_send_other_messages=True,
-                                     can_add_web_page_previews=True)
-            bot.sendMessage(chat.id, f"I shall allow <b>{html.escape(member.user.first_name)}</b> to text!",
-                            parse_mode=ParseMode.HTML)
-            return (f"<b>{html.escape(chat.title)}:</b>\n"
-                    f"#UNMUTE\n"
-                    f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-                    f"<b>User:</b> {mention_html(member.user.id, member.user.first_name)}")
-    else:
+    if member.status in ['kicked', 'left']:
         message.reply_text("This user isn't even in the chat, unmuting them won't make them talk more than they "
                            "already do!")
 
+    elif (member.can_send_messages
+                and member.can_send_media_messages
+                and member.can_send_other_messages
+                and member.can_add_web_page_previews):
+        message.reply_text("This user already has the right to speak.")
+    else:
+        bot.restrict_chat_member(chat.id, int(user_id),
+                                 can_send_messages=True,
+                                 can_send_media_messages=True,
+                                 can_send_other_messages=True,
+                                 can_add_web_page_previews=True)
+        bot.sendMessage(chat.id, f"I shall allow <b>{html.escape(member.user.first_name)}</b> to text!",
+                        parse_mode=ParseMode.HTML)
+        return (f"<b>{html.escape(chat.title)}:</b>\n"
+                f"#UNMUTE\n"
+                f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
+                f"<b>User:</b> {mention_html(member.user.id, member.user.first_name)}")
     return ""
 
 
@@ -148,11 +143,7 @@ def temp_mute(bot: Bot, update: Update, args: List[str]) -> str:
     split_reason = reason.split(None, 1)
 
     time_val = split_reason[0].lower()
-    if len(split_reason) > 1:
-        reason = split_reason[1]
-    else:
-        reason = ""
-
+    reason = split_reason[1] if len(split_reason) > 1 else ""
     mutetime = extract_time(message, time_val)
 
     if not mutetime:

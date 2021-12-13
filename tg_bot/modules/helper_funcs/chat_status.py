@@ -171,8 +171,6 @@ def user_not_admin(func):
 
         if user and not is_user_admin(chat, user.id):
             return func(bot, update, *args, **kwargs)
-        elif not user:
-            pass
 
     return is_not_admin
 
@@ -205,7 +203,8 @@ def bot_can_delete(func):
         message_chat_title = update.effective_message.chat.title
 
         if update_chat_title == message_chat_title:
-            cant_delete = f"I can't delete messages here!\nMake sure I'm admin and can delete other user's messages."
+            cant_delete = "I can't delete messages here!\nMake sure I'm admin and can delete other user's messages."
+
         else:
             cant_delete = f"I can't delete messages in <b>{update_chat_title}</b>!\nMake sure I'm admin and can delete other user's messages there."
 
@@ -225,7 +224,8 @@ def can_pin(func):
         message_chat_title = update.effective_message.chat.title
 
         if update_chat_title == message_chat_title:
-            cant_pin = f"I can't pin messages here!\nMake sure I'm admin and can pin messages."
+            cant_pin = "I can't pin messages here!\nMake sure I'm admin and can pin messages."
+
         else:
             cant_pin = f"I can't pin messages in <b>{update_chat_title}</b>!\nMake sure I'm admin and can pin messages there."
 
@@ -245,7 +245,8 @@ def can_promote(func):
         message_chat_title = update.effective_message.chat.title
 
         if update_chat_title == message_chat_title:
-            cant_promote = f"I can't promote/demote people here!\nMake sure I'm admin and can appoint new admins."
+            cant_promote = "I can't promote/demote people here!\nMake sure I'm admin and can appoint new admins."
+
         else:
             cant_promote = (f"I can't promote/demote people in <b>{update_chat_title}</b>!\n"
                             f"Make sure I'm admin there and can appoint new admins.")
@@ -266,7 +267,8 @@ def can_restrict(func):
         message_chat_title = update.effective_message.chat.title
 
         if update_chat_title == message_chat_title:
-            cant_restrict = f"I can't restrict people here!\nMake sure I'm admin and can restrict users."
+            cant_restrict = "I can't restrict people here!\nMake sure I'm admin and can restrict users."
+
         else:
             cant_restrict = f"I can't restrict people in <b>{update_chat_title}</b>!\nMake sure I'm admin there and can restrict users."
 
@@ -286,13 +288,11 @@ def connection_status(func):
         if conn:
             chat = dispatcher.bot.getChat(conn)
             update.__setattr__("_effective_chat", chat)
-            return func(bot, update, *args, **kwargs)
-        else:
-            if update.effective_message.chat.type == "private":
-                update.effective_message.reply_text("Send /connect in a group that you and I have in common first.")
-                return connected_status
+        elif update.effective_message.chat.type == "private":
+            update.effective_message.reply_text("Send /connect in a group that you and I have in common first.")
+            return connected_status
 
-            return func(bot, update, *args, **kwargs)
+        return func(bot, update, *args, **kwargs)
 
     return connected_status
 

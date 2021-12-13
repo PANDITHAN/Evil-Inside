@@ -29,23 +29,15 @@ def cov(bot: Bot, update: Update):
     recovered_delta = 0
     mortality_rate = 0
     recovery_rate = 0
-    country_input = ''
-    state_input = ''
-    district_input = ''
-
     loc_input = message.text.split(',')
-    if len(loc_input) > 2:
-        district_input = loc_input[2].strip()
-    if len(loc_input) > 1:
-        state_input = loc_input[1].strip()
-    if len(loc_input) > 0:
-        country_input = loc_input[0][4:].strip()
-
+    district_input = loc_input[2].strip() if len(loc_input) > 2 else ''
+    state_input = loc_input[1].strip() if len(loc_input) > 1 else ''
+    country_input = loc_input[0][4:].strip() if len(loc_input) > 0 else ''
     try:
         url_global = "https://bing.com/covid/data"
         json_response = requests.get(url_global)
         global_dict = json.loads(json_response.text)
-        
+
         target = {}
 
         if country_input:
