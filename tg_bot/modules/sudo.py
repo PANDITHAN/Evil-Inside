@@ -43,7 +43,7 @@ def sudopromote(bot: Bot, update: Update, args: List[str]):
 def sudodemote(bot: Bot, update: Update, args: List[str]):
     message = update.effective_message
     user_id = extract_user(message, args)
-    
+
     if not user_id:
         message.reply_text("You don't seem to be referring to a user.")
         return ""
@@ -51,7 +51,7 @@ def sudodemote(bot: Bot, update: Update, args: List[str]):
     if int(user_id) == OWNER_ID:
         message.reply_text("The specified user is my owner! I won't remove him from SUDO_USERS list!")
         return ""
-    
+
     if user_id not in SUDO_USERS:
         message.reply_text("{} is not a sudo user".format(user_id))
         return ""
@@ -60,12 +60,12 @@ def sudodemote(bot: Bot, update: Update, args: List[str]):
 
     with open("sudo_users.txt","w") as file:
         for user in users:
-            if not int(user) == user_id:
+            if int(user) != user_id:
                 file.write(str(user) + "\n")
 
     SUDO_USERS.remove(user_id)
     message.reply_text("Succefully removed from SUDO user list!")
-    
+
     return ""
 
 

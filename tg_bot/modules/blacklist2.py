@@ -29,8 +29,8 @@ def blackliststicker(bot: Bot, update: Update, args: List[str]):
 	msg = update.effective_message  # type: Optional[Message]
 	chat = update.effective_chat  # type: Optional[Chat]
 	user = update.effective_user  # type: Optional[User]
-	
-		
+
+
 	conn = connected(bot, update, chat, user.id, need_admin=False)
 	if conn:
 		chat_id = conn
@@ -38,18 +38,17 @@ def blackliststicker(bot: Bot, update: Update, args: List[str]):
 	else:
 		if chat.type == "private":
 			return
-		else:
-			chat_id = update.effective_chat.id
-			chat_name = chat.title
-		
+		chat_id = update.effective_chat.id
+		chat_name = chat.title
+
 	sticker_list = "<b>List black stickers currently in {}:</b>\n".format(chat_name)
 
 	all_stickerlist = sql.get_chat_stickers(chat_id)
 
-	if len(args) > 0 and args[0].lower() == 'copy':
+	if args and args[0].lower() == 'copy':
 		for trigger in all_stickerlist:
 			sticker_list += "<code>{}</code>\n".format(html.escape(trigger))
-	elif len(args) == 0:
+	elif not args:
 		for trigger in all_stickerlist:
 			sticker_list += " - <code>{}</code>\n".format(html.escape(trigger))
 
@@ -82,7 +81,9 @@ def add_blackliststicker(bot: Bot, update: Update):
 
 	if len(words) > 1:
 		text = words[1].replace('https://t.me/addstickers/', '')
-		to_blacklist = list(set(trigger.strip() for trigger in text.split("\n") if trigger.strip()))
+		to_blacklist = list(
+		    {trigger.strip()
+		     for trigger in text.split("\n") if trigger.strip()})
 		added = 0
 		for trigger in to_blacklist:
 			try:
@@ -103,7 +104,7 @@ def add_blackliststicker(bot: Bot, update: Update):
 	elif msg.reply_to_message:
 		added = 0
 		trigger = msg.reply_to_message.sticker.set_name
-		if trigger == None:
+		if trigger is None:
 			send_message(update.effective_message, "Sticker is invalid!")
 			return
 		try:
@@ -142,7 +143,9 @@ def unblackliststicker(bot: Bot, update: Update):
 
 	if len(words) > 1:
 		text = words[1].replace('https://t.me/addstickers/', '')
-		to_unblacklist = list(set(trigger.strip() for trigger in text.split("\n") if trigger.strip()))
+		to_unblacklist = list(
+		    {trigger.strip()
+		     for trigger in text.split("\n") if trigger.strip()})
 		successful = 0
 		for trigger in to_unblacklist:
 			success = sql.rm_from_stickers(chat_id, trigger.lower())
@@ -169,7 +172,7 @@ def unblackliststicker(bot: Bot, update: Update):
 				parse_mode=ParseMode.HTML)
 	elif msg.reply_to_message:
 		trigger = msg.reply_to_message.sticker.set_name
-		if trigger == None:
+		if trigger is None:
 			send_message(update.effective_message, "Sticker is invalid!")
 			return
 		success = sql.rm_from_stickers(chat_id, trigger.lower())
@@ -189,7 +192,7 @@ def blacklist_mode(bot: Bot, update: Update, args: List[str]):
 	chat = update.effective_chat  # type: Optional[Chat]
 	user = update.effective_user  # type: Optional[User]
 	msg = update.effective_message  # type: Optional[Message]
-	
+
 
 	conn = connected(bot, update, chat, user.id, need_admin=True)
 	if conn:
@@ -205,10 +208,10 @@ def blacklist_mode(bot: Bot, update: Update, args: List[str]):
 		chat_name = update.effective_message.chat.title
 
 	if args:
-		if args[0].lower() == 'off' or args[0].lower() == 'nothing' or args[0].lower() == 'no':
+		if args[0].lower() in ['off', 'nothing', 'no']:
 			settypeblacklist = 'turn off'
 			sql.set_blacklist_strength(chat_id, 0, "0")
-		elif args[0].lower() == 'del' or args[0].lower() == 'delete':
+		elif args[0].lower() in ['del', 'delete']:
 			settypeblacklist = 'left, the message will be deleted'
 			sql.set_blacklist_strength(chat_id, 1, "0")
 		elif args[0].lower() == 'warn':
@@ -329,9 +332,7 @@ def del_blackliststicker(bot: Bot, update: Update):
 					bot.sendMessage(chat.id, "{} muted for {} because using '{}' which in blacklist stickers".format(mention_markdown(user.id, user.first_name), value, trigger), parse_mode="markdown")
 					return
 			except BadRequest as excp:
-				if excp.message == "Message to delete not found":
-					pass
-				else:
+				if excp.message != "Message to delete not found":
 					LOGGER.exception("Error while deleting blacklist message.")
 				break
 

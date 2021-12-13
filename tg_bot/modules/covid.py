@@ -15,7 +15,7 @@ from urllib.request import urlopen
 def covid(bot: Bot, update: Update):
     message = update.effective_message
     device = message.text[len(' /deploy '):]
-    fetch = get(f'https://coronavirus-tracker-api.herokuapp.com/all')
+    fetch = get('https://coronavirus-tracker-api.herokuapp.com/all')
 
     if fetch.status_code == 200:
         usr = fetch.json()

@@ -18,14 +18,13 @@ ELEVATED_USERS_FILE = os.path.join(os.getcwd(), 'tg_bot/elevated_users.json')
 
 def check_user_id(user_id: int, bot: Bot) -> Optional[str]:
     if not user_id:
-        reply = "That...is a chat!"
+        return "That...is a chat!"
 
     elif user_id == bot.id:
-        reply = "This does not work that way."
+        return "This does not work that way."
 
     else:
-        reply = None
-    return reply
+        return None
 
 
 @run_async

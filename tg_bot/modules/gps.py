@@ -25,7 +25,7 @@ GMAPS_LOC = "https://maps.googleapis.com/maps/api/geocode/json"
 
 def gps(bot: Bot, update: Update, args: List[str]):
     message = update.effective_message
-    if len(args) == 0:
+    if not args:
         update.effective_message.reply_text("That was a funny joke, but no really, put in a location")
     try:
         geolocator = Nominatim(user_agent="SkittBot")

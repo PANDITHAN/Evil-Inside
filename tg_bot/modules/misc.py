@@ -71,15 +71,13 @@ def get_id(bot: Bot, update: Update, args: List[str]):
             msg.reply_text(f"{html.escape(user.first_name)}'s id is <code>{user.id}</code>.",
                            parse_mode=ParseMode.HTML)
 
+    elif chat.type == "private":
+        msg.reply_text(f"Your id is <code>{chat.id}</code>.",
+                       parse_mode=ParseMode.HTML)
+
     else:
-
-        if chat.type == "private":
-            msg.reply_text(f"Your id is <code>{chat.id}</code>.",
-                           parse_mode=ParseMode.HTML)
-
-        else:
-            msg.reply_text(f"This group's id is <code>{chat.id}</code>.",
-                           parse_mode=ParseMode.HTML)
+        msg.reply_text(f"This group's id is <code>{chat.id}</code>.",
+                       parse_mode=ParseMode.HTML)
 
 
 @run_async
@@ -242,7 +240,7 @@ def magisk(bot, update):
                     f'• Zip - [{data["magisk"]["version"]}-{data["magisk"]["versionCode"]}]({data["magisk"]["link"]}) \n' \
                     f'• App - [{data["app"]["version"]}-{data["app"]["versionCode"]}]({data["app"]["link"]}) \n' \
                     f'• Uninstaller - [{data["magisk"]["version"]}-{data["magisk"]["versionCode"]}]({data["uninstaller"]["link"]})\n\n'
-                        
+
 
     del_msg = update.message.reply_text("*Latest Magisk Releases:*\n{}".format(releases),
                                parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
@@ -251,13 +249,16 @@ def magisk(bot, update):
         del_msg.delete()
         update.effective_message.delete()
     except BadRequest as err:
-        if (err.message == "Message to delete not found" ) or (err.message == "Message can't be deleted" ):
+        if err.message in [
+            "Message to delete not found",
+            "Message can't be deleted",
+        ]:
             return
 
 @run_async
 def checkfw(bot, update, args):
-    if not len(args) == 2:
-        reply = f'Give me something to fetch, like:\n`/checkfw SM-N975F DBT`'
+    if len(args) != 2:
+        reply = 'Give me something to fetch, like:\n`/checkfw SM-N975F DBT`'
         del_msg = update.effective_message.reply_text("{}".format(reply),
                                parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
         time.sleep(5)
@@ -265,10 +266,13 @@ def checkfw(bot, update, args):
             del_msg.delete()
             update.effective_message.delete()
         except BadRequest as err:
-            if (err.message == "Message to delete not found" ) or (err.message == "Message can't be deleted" ):
+            if err.message in [
+                "Message to delete not found",
+                "Message can't be deleted",
+            ]:
                 return
     temp,csc = args
-    model = f'sm-'+temp if not temp.upper().startswith('SM-') else temp
+    model = 'sm-' + temp if not temp.upper().startswith('SM-') else temp
     fota = get(f'http://fota-cloud-dn.ospserver.net/firmware/{csc.upper()}/{model.upper()}/version.xml')
     test = get(f'http://fota-cloud-dn.ospserver.net/firmware/{csc.upper()}/{model.upper()}/version.test.xml')
     if test.status_code != 200:
@@ -280,7 +284,10 @@ def checkfw(bot, update, args):
             del_msg.delete()
             update.effective_message.delete()
         except BadRequest as err:
-            if (err.message == "Message to delete not found" ) or (err.message == "Message can't be deleted" ):
+            if err.message in [
+                "Message to delete not found",
+                "Message can't be deleted",
+            ]:
                 return
     page1 = BeautifulSoup(fota.content, 'lxml')
     page2 = BeautifulSoup(test.content, 'lxml')
@@ -294,7 +301,7 @@ def checkfw(bot, update, args):
             reply += f'• Phone: `{phone1}`\n'
         if os1:
             reply += f'• Android: `{os1}`\n'
-        reply += f'\n'
+        reply += '\n'
     else:
         reply = f'*No public release found for {model.upper()} and {csc.upper()}.*\n\n'
     reply += f'*Latest test firmware for {model.upper()} and {csc.upper()} is:*\n'
@@ -305,18 +312,18 @@ def checkfw(bot, update, args):
             reply += f'• Phone: `{phone2}`\n'
         if os2:
             reply += f'• Android: `{os2}`\n'
-        reply += f'\n'
+        reply += '\n'
     else:
         md5=page2.find("latest").text.strip()
         reply += f'• Hash: `{md5}`\n• Android: `{os2}`\n\n'
-    
+
     update.message.reply_text("{}".format(reply),
                            parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
 @run_async
 def getfw(bot, update, args):
-    if not len(args) == 2:
-        reply = f'Give me something to fetch, like:\n`/getfw SM-N975F DBT`'
+    if len(args) != 2:
+        reply = 'Give me something to fetch, like:\n`/getfw SM-N975F DBT`'
         del_msg = update.effective_message.reply_text("{}".format(reply),
                                parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
         time.sleep(5)
@@ -324,10 +331,13 @@ def getfw(bot, update, args):
             del_msg.delete()
             update.effective_message.delete()
         except BadRequest as err:
-            if (err.message == "Message to delete not found" ) or (err.message == "Message can't be deleted" ):
+            if err.message in [
+                "Message to delete not found",
+                "Message can't be deleted",
+            ]:
                 return
     temp,csc = args
-    model = f'sm-'+temp if not temp.upper().startswith('SM-') else temp
+    model = 'sm-' + temp if not temp.upper().startswith('SM-') else temp
     test = get(f'http://fota-cloud-dn.ospserver.net/firmware/{csc.upper()}/{model.upper()}/version.test.xml')
     if test.status_code != 200:
         reply = f"Couldn't find any firmware downloads for {temp.upper()} and {csc.upper()}, please refine your search or try again later!"
@@ -338,7 +348,10 @@ def getfw(bot, update, args):
             del_msg.delete()
             update.effective_message.delete()
         except BadRequest as err:
-            if (err.message == "Message to delete not found" ) or (err.message == "Message can't be deleted" ):
+            if err.message in [
+                "Message to delete not found",
+                "Message can't be deleted",
+            ]:
                 return
     url1 = f'https://samfrew.com/model/{model.upper()}/region/{csc.upper()}/'
     url2 = f'https://www.sammobile.com/samsung/firmware/{model.upper()}/{csc.upper()}/'
@@ -356,7 +369,7 @@ def getfw(bot, update, args):
             reply += f'• Phone: `{phone}`\n'
         if os:
             reply += f'• Android: `{os}`\n'
-    reply += f'\n'
+    reply += '\n'
     reply += f'*Downloads for {model.upper()} and {csc.upper()}*\n'
     reply += f'• [samfrew.com]({url1})\n'
     reply += f'• [sammobile.com]({url2})\n'
@@ -376,7 +389,10 @@ def twrp(bot, update, args):
             del_msg.delete()
             update.effective_message.delete()
         except BadRequest as err:
-            if (err.message == "Message to delete not found" ) or (err.message == "Message can't be deleted" ):
+            if err.message in [
+                "Message to delete not found",
+                "Message can't be deleted",
+            ]:
                 return
 
     device = " ".join(args)
@@ -390,7 +406,10 @@ def twrp(bot, update, args):
             del_msg.delete()
             update.effective_message.delete()
         except BadRequest as err:
-            if (err.message == "Message to delete not found" ) or (err.message == "Message can't be deleted" ):
+            if err.message in [
+                "Message to delete not found",
+                "Message can't be deleted",
+            ]:
                 return
     else:
         reply = f'*Latest Official TWRP for {device}*\n'            
