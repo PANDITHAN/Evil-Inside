@@ -28,6 +28,7 @@
       },
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, empty this field if you dont have one. Watch Video (check out Redme.md)",
+         "required": false,
          "value": ""
       },      
       "OWNER_ID": {
